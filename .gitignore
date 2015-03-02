@@ -3,8 +3,12 @@
 
 # Except ...
 !.gitignore
+
 !.gitconfig.template
 !.gitignore_global
 !.profile
 !.zshrc
+
+!.config/
+!.config/user-dirs.dirs
 
