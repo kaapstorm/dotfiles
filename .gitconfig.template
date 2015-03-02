@@ -1,0 +1,7 @@
+[user]
+	email = username@example.com
+	name = Your Name
+[push]
+	default = simple
+[core]
+	excludesfile = /home/username/.gitignore_global
