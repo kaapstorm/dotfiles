@@ -4,6 +4,7 @@
 # Except ...
 !.gitignore
 
+!.bash_aliases
 !.gitconfig.template
 !.gitignore_global
 !.profile
