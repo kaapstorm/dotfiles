@@ -77,3 +77,6 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias venv='. venv/bin/activate'
 
+# Disable CapsLock (for keyboards that don't have nice dip switches)
+setxkbmap -option ctrl:nocaps
+
