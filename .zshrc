@@ -75,6 +75,7 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gsur='git submodule update --recursive'
 alias venv='. venv/bin/activate'
 
 # Disable CapsLock (for keyboards that don't have nice dip switches)
