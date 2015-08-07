@@ -81,3 +81,6 @@ alias venv='. venv/bin/activate'
 # Disable CapsLock (for keyboards that don't have nice dip switches)
 setxkbmap -option ctrl:nocaps
 
+# Initialise virtualenvwrapper
+source `which virtualenvwrapper.sh`
+
