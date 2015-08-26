@@ -75,6 +75,7 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gmm='git merge master'
 alias gsur='git submodule update --recursive'
 alias venv='. venv/bin/activate'
 
