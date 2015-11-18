@@ -20,3 +20,12 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# When IDEA is used on a system with IBus installed and running, keyboard
+# input sometimes becomes blocked by IBus daemon. Do ONE of the following:
+#  * Upgrade IBus to version 1.5.11
+#  * Add "export IBUS_ENABLE_SYNC_MODE=1" to ~/.profile and restart a session
+#  * Turn off IBus: System Settings > Language Support > Keyboard input method
+# https://youtrack.jetbrains.com/issue/IDEA-78860
+export IBUS_ENABLE_SYNC_MODE=1
+
