@@ -83,5 +83,12 @@ alias venv='. venv/bin/activate'
 setxkbmap -option ctrl:nocaps
 
 # Initialise virtualenvwrapper
-source `which virtualenvwrapper.sh`
+if [ -e /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]
+then
+    # Ubuntu 15.10
+    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+else
+    # Everything else
+    source `which virtualenvwrapper.sh`
+fi
 
