@@ -75,9 +75,12 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# "git branch diff" to show GitHub-style diff 
+# -- http://stackoverflow.com/a/15955008
+alias gbd='git diff `git merge-base master HEAD` HEAD'
 alias gmm='git merge master'
 alias gsur='git submodule update --recursive'
-alias venv='. venv/bin/activate'
 
 # Disable CapsLock (for keyboards that don't have nice dip switches)
 setxkbmap -option ctrl:nocaps
