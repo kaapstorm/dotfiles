@@ -1,3 +1,5 @@
 __pycache__/
 pip_cache/
 .idea/
+*.py[co]
+
