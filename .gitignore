@@ -11,11 +11,7 @@
 !.vimrc
 !.zshrc
 
-!.config/
 !.config/user-dirs.dirs
-
-!.config/sublime-text-3/
-!.config/sublime-text-3/Packages/
-!.config/sublime-text-3/Packages/User/
 !.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+!.oh-my-zsh/custom/kaapstorm.zsh-theme
 
