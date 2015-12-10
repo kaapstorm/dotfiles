@@ -80,6 +80,7 @@ export EDITOR='vim'
 # -- http://stackoverflow.com/a/15955008
 alias gbd='git diff `git merge-base master HEAD` HEAD'
 alias gmm='git merge master'
+alias gpr='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gsur='git submodule update --recursive'
 
 # Disable CapsLock (for keyboards that don't have nice dip switches)
