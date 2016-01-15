@@ -15,8 +15,8 @@
 
     // Line length. 72: PEP8 docstrings, 79: PEP8 code, 115: GitHub, 120: wide
     "rulers": [ 72, 79, 115, 120 ],
-    "word_wrap": true,
-    "wrap_width": 80,
+    // "word_wrap": true,
+    // "wrap_width": 80,
 
     // Whitespace - no tabs, trimming, end files with \n
     "tab_size": 4,
