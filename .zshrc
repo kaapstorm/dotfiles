@@ -88,12 +88,5 @@ alias ggr='git grep'
 setxkbmap -option ctrl:nocaps
 
 # Initialise virtualenvwrapper
-if [ -e /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]
-then
-    # Ubuntu 15.10
-    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-else
-    # Everything else
-    source `which virtualenvwrapper.sh`
-fi
+source `which virtualenvwrapper.sh`
 
