@@ -27,3 +27,5 @@ set shiftround             " Round spaces to nearest shiftwidth multiple
 set nojoinspaces           " Don't convert spaces to tabs
 set tabstop=4              " A tab is 4 spaces
 
+" Load Pathogen bundles
+execute pathogen#infect()
