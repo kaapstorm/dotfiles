@@ -83,6 +83,7 @@ alias gmm='git merge master'
 alias gpr='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gsur='git submodule update --recursive'
 alias ggr='git grep'
+alias ggrn='git grep -n'
 
 # Disable CapsLock (for keyboards that don't have nice dip switches)
 setxkbmap -option ctrl:nocaps
