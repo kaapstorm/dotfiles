@@ -96,3 +96,7 @@ setxkbmap -option ctrl:nocaps
 # Initialise virtualenvwrapper
 source `which virtualenvwrapper.sh`
 
+# Dimagi settings
+alias dimagi-gpg="gpg --keyring dimagi.gpg --no-default-keyring"
+export REUSE_DB=1
+
