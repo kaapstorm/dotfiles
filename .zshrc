@@ -53,6 +53,10 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+# 2018-03-30: bin shared between dualboot and users
+if [ -d "/home/share/bin" ] ; then
+    PATH="/home/share/bin:$PATH"
+fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -84,6 +88,7 @@ alias gpr='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gsur='git submodule update --recursive'
 alias ggr='git grep'
 alias ggrn='git grep -n'
+alias glmsur='git pull-master-recursive'
 
 # Disable CapsLock (for keyboards that don't have nice dip switches)
 setxkbmap -option ctrl:nocaps
