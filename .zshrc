@@ -54,8 +54,8 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # 2018-03-30: bin shared between dualboot and users
-if [ -d "/home/share/bin" ] ; then
-    PATH="/home/share/bin:$PATH"
+if [ -d "/srv/home/share/bin" ] ; then
+    PATH="/srv/home/share/bin:$PATH"
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
