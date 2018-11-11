@@ -21,6 +21,9 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# Use a sane date format
+export LC_TIME=en_GB.UTF-8
+
 # 2018-03-30: bin shared between dualboot and users
 #             See also .zshrc
 if [ -d "/srv/home/share/bin" ] ; then
