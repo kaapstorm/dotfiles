@@ -94,5 +94,9 @@ alias glmsur='git pull-master-recursive'
 setxkbmap -option ctrl:nocaps
 
 # Initialise virtualenvwrapper
-source `which virtualenvwrapper.sh`
-
+if [ -f $(which virtualenvwrapper.sh) ] ; then
+    if [ -d "/srv/home/$USER/ve" ] ; then
+        export WORKON_HOME="/srv/home/$USER/ve"
+    fi
+    source $(which virtualenvwrapper.sh)
+fi
