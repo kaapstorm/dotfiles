@@ -53,9 +53,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# 2018-03-30: bin shared between dualboot and users
-if [ -d "/srv/home/share/bin" ] ; then
-    PATH="/srv/home/share/bin:$PATH"
+# 2018-03-30: bin shared across dualboot
+if [ -d "/srv/home/$USER/bin" ] ; then
+    PATH="/srv/home/$USER/bin:$PATH"
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
