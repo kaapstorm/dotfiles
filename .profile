@@ -22,7 +22,6 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # 2018-03-30: bin shared across dualboot
-#             See also .zshrc
 if [ -d "/srv/home/$USER/bin" ] ; then
     PATH="/srv/home/$USER/bin:$PATH"
 fi
