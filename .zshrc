@@ -104,6 +104,9 @@ alias glmsur='git pull-master-recursive'
 # Disable CapsLock (for keyboards that don't have nice dip switches)
 setxkbmap -option ctrl:nocaps
 
+# For Python 3.7+
+export PYTHONBREAKPOINT=ipdb.set_trace
+
 # Initialise virtualenvwrapper
 if [[ -f $(which virtualenvwrapper.sh) ]] ; then
     export WORKON_HOME=$HOME/venv
