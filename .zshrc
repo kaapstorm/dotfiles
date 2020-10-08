@@ -1,6 +1,6 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
+# Add user's bin to $PATH
+# $HOME/bin is shared across dual-boot; $HOME/.local/bin is just this OS
+export PATH=$HOME/.local/bin:$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -103,6 +103,9 @@ alias glmsur='git pull-master-recursive'
 
 # Disable CapsLock (for keyboards that don't have nice dip switches)
 setxkbmap -option ctrl:nocaps
+
+# Use a sane date format
+export LC_TIME=en_GB.UTF-8
 
 # For Python 3.7+
 export PYTHONBREAKPOINT=ipdb.set_trace

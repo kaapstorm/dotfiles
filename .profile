@@ -20,11 +20,3 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-# 2018-03-30: bin shared across dualboot
-if [ -d "/srv/home/$USER/bin" ] ; then
-    PATH="/srv/home/$USER/bin:$PATH"
-fi
-
-# Use a sane date format
-export LC_TIME=en_GB.UTF-8
