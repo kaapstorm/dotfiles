@@ -93,7 +93,7 @@ export EDITOR='vim'
 # For a full list of active aliases, run `alias`.
 alias gbd='git diff `git merge-base master HEAD` HEAD'
 alias gmm='git merge master'
-alias gpr='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+alias gpr='echo You mean gpsup'
 alias gsur='git submodule update --recursive'
 alias ggr='git grep'
 alias ggrn='git grep -n'
