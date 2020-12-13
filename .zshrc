@@ -101,8 +101,11 @@ alias glmsur='git pull-master-recursive'
 # "git branch diff" to show GitHub-style diff
 # -- http://stackoverflow.com/a/15955008
 
-# Disable CapsLock (for keyboards that don't have nice dip switches)
-setxkbmap -option ctrl:nocaps
+if [[ -z `who -m` ]]  # (We are using an X display)
+then
+    # Disable CapsLock (for keyboards that don't have nice dip switches)
+    setxkbmap -option ctrl:nocaps
+fi
 
 # Use a sane date format
 export LC_TIME=en_GB.UTF-8
