@@ -107,9 +107,6 @@ setxkbmap -option ctrl:nocaps
 # Use a sane date format
 export LC_TIME=en_GB.UTF-8
 
-# For Python 3.7+
-export PYTHONBREAKPOINT=ipdb.set_trace
-
 # For Tilix
 # -- https://gnunn1.github.io/tilix-web/manual/vteconfig/
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
