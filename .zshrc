@@ -116,6 +116,10 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte-2.91.sh
 fi
 
+# Launch gpg-agent for Git
+export GPG_TTY=`tty`
+gpgconf --launch gpg-agent
+
 # Initialise virtualenvwrapper
 if [[ -f $(which virtualenvwrapper.sh) ]] ; then
     export WORKON_HOME=$HOME/venv
