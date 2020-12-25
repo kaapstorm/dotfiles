@@ -101,7 +101,7 @@ alias glmsur='git pull-master-recursive'
 # "git branch diff" to show GitHub-style diff
 # -- http://stackoverflow.com/a/15955008
 
-if [[ -z `who -m` ]]  # (We are using an X display)
+if [[ $DISPLAY ]]
 then
     # Disable CapsLock (for keyboards that don't have nice dip switches)
     setxkbmap -option ctrl:nocaps
