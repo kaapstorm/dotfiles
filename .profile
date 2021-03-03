@@ -20,3 +20,6 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# Set env for Rust (used by rkvm)
+source "$HOME/.cargo/env"
