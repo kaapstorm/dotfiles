@@ -110,12 +110,6 @@ fi
 # Use a sane date format
 export LC_TIME=en_GB.UTF-8
 
-# For Tilix
-# -- https://gnunn1.github.io/tilix-web/manual/vteconfig/
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-    source /etc/profile.d/vte-2.91.sh
-fi
-
 # Launch gpg-agent for Git
 export GPG_TTY=`tty`
 gpgconf --launch gpg-agent
