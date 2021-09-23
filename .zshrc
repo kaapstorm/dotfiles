@@ -101,6 +101,13 @@ alias glmsur='git pull-master-recursive'
 # "git branch diff" to show GitHub-style diff
 # -- http://stackoverflow.com/a/15955008
 
+# For Dimagi GPG keyring
+alias dimagi-gpg='gpg --keyring dimagi.gpg --no-default-keyring'
+
+# For commcare-cloud
+# https://confluence.dimagi.com/pages/viewpage.action?pageId=106629646
+export COMMCARE_CLOUD_USE_AWS_SSM=1
+
 if [[ $DISPLAY ]]
 then
     # Disable CapsLock (for keyboards that don't have nice dip switches)
