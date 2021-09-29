@@ -107,6 +107,7 @@ alias dimagi-gpg='gpg --keyring dimagi.gpg --no-default-keyring'
 # For commcare-cloud
 # https://confluence.dimagi.com/pages/viewpage.action?pageId=106629646
 export COMMCARE_CLOUD_USE_AWS_SSM=1
+export COMMCARE_CLOUD_REPO=$HOME/src/dimagi/commcare-cloud
 
 if [[ $DISPLAY ]]
 then
