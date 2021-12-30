@@ -2,6 +2,8 @@ __pycache__/
 pip_cache/
 .idea/
 .pytype/
+.env
+.venv/
 venv/
 *.py[co]
 
