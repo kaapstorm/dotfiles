@@ -105,6 +105,9 @@ alias venv='if [[ -d .venv ]] ; then source .venv/bin/activate ; elif [[ -d venv
 # For Dimagi GPG keyring
 alias dimagi-gpg='gpg --keyring dimagi.gpg --no-default-keyring'
 
+# For commcare-hq
+export CCHQ_STRICT_WARNINGS=1
+
 # For commcare-cloud
 # https://confluence.dimagi.com/pages/viewpage.action?pageId=106629646
 export COMMCARE_CLOUD_USE_AWS_SSM=1
