@@ -22,4 +22,6 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # Set env for Rust (used by rkvm)
-source "$HOME/.cargo/env"
+if [ -d "$HOME/.cargo" ] ; then
+    source "$HOME/.cargo/env"
+fi
