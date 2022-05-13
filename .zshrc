@@ -126,9 +126,3 @@ export LC_TIME=en_GB.UTF-8
 export GPG_TTY=`tty`
 gpgconf --launch gpg-agent
 
-# Initialise virtualenvwrapper
-if [[ -f $(which virtualenvwrapper.sh) ]] ; then
-    export WORKON_HOME=$HOME/venv
-    export VIRTUALENVWRAPPER_PYTHON=$(which python3)
-    source $(which virtualenvwrapper.sh)
-fi
