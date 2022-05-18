@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+import fileinput
+from lxml import etree
+
+
+def tidyxml():
+    with fileinput.input() as f:
+        xml = b"".join(line.encode("utf-8") for line in f)
+    root = etree.XML(xml)
+    tidy = etree.tostring(root, encoding="utf-8", xml_declaration=True,
+                          pretty_print=True)
+    print(tidy.decode("utf-8"))
+
+
+if __name__ == "__main__":
+    tidyxml()

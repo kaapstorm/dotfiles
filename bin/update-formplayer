@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# This script downloads formplayer.properties and formplayer.jar. Some
+# updates require the Formplayer database to be recreated. To do that:
+#
+#     $ dropdb formplayer -U commcarehq -h localhost
+#     $ createdb formplayer -U commcarehq -h localhost
+#
+# The PostgreSQL password can be found in HQ's localsettings.py in the
+# DATABASES dictionary.
+
+echo Downloading Formplayer and its settings
+echo Instructions on recreating the database can be found in this script
+
+curl https://raw.githubusercontent.com/dimagi/formplayer/master/config/application.example.properties -o application.properties
+curl https://s3.amazonaws.com/dimagi-formplayer-jars/latest-successful/formplayer.jar -o formplayer.jar
+

@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""
+mkpasswd
+
+Generate a random password
+
+Usage:
+  mkpasswd
+
+"""
+import random
+import string
+
+
+def mkpasswd(length=48, lower=True, upper=True, digits=True, punct=False):
+    population = []
+    if lower:
+        population += list(string.ascii_lowercase)
+    if upper:
+        population += list(string.ascii_uppercase)
+    if digits:
+        population += list(string.digits)
+    if punct:
+        population += list(string.punctuation)
+    assert population, 'There are no characters to include in a password'
+    return ''.join(random.choices(population, k=length))
+
+
+if __name__ == '__main__':
+    passwd = mkpasswd()
+    print(passwd)

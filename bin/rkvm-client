@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sudo chgrp adm /dev/uinput
+sudo chmod g+rw /dev/uinput
+/opt/rkvm/client
+

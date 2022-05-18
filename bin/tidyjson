@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+import fileinput
+import json
+
+
+def tidyjson():
+    with fileinput.input() as f:
+        string = "".join(l for l in f)
+    data = json.loads(string)
+    tidy = json.dumps(data, indent=2)
+    print(tidy)
+
+
+if __name__ == "__main__":
+    tidyjson()
+

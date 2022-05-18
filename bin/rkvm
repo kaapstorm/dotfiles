@@ -1,0 +1,11 @@
+#!/bin/sh
+# Run RKVM client
+
+grp=`ls -l /dev/uinput | awk '{print $4;}'`
+if [ "$grp" = "root" ]
+then
+    sudo chgrp adm /dev/uinput
+    sudo chmod g+rw /dev/uinput
+fi
+/opt/rkvm/client
+

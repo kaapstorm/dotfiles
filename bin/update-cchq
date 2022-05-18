@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [[ -z "$VIRTUAL_ENV" ]]
+then
+    echo 'Please activate a virtualenv'
+    exit 1
+fi
+
+git pull-master-recursive
+pip install -r requirements/dev-requirements.txt
+find . -name '*.pyc' -delete
+
+# Compress offline, like production:
+#./manage.py collectstatic --noinput
+#./manage.py compilejsi18n
+#./manage.py fix_less_imports_collectstatic
+#./manage.py compress --force
+
+#./manage.py build_requirejs --local
+
+./manage.py migrate
+# For USE_PARTITIONED_DATABASE = True
+#./manage.py migrate --database=proxy
+#./manage.py migrate --database=p1
+#./manage.py migrate --database=p2
+
+yarn install --frozen-lockfile
+
+./manage.py ptop_preindex
+

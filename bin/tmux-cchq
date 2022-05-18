@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# If celery dies with DBPageNotFoundError:
+#     # https://stackoverflow.com/a/25588441
+#     `$ rm celerybeat-schedule`
+
+if [[ -z "$VIRTUAL_ENV" ]]
+then
+    echo 'Please activate a virtualenv'
+    exit 1
+fi
+
+tmux new-session -s cchq -n ptop \
+        './manage.py ptop_es_manage --flip_all_aliases; \
+         ./manage.py run_ptop --all --processor-chunk-size=1' \; \
+    new-window -n worker \
+        'celery -A corehq worker -l info' \; \
+    new-window -n beat \
+        'celery -A corehq beat -l info' \; \
+    new-window -n formplayer \
+        'java -jar formplayer.jar' \; \
+    new-window -n runserver \
+        './manage.py runserver_plus 0.0.0.0:8000' \;
+

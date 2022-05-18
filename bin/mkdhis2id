@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+from random import choice
+from string import ascii_letters, digits
+
+
+def dhis2_id():
+    alphanumeric = ascii_letters + digits
+    start = choice(ascii_letters)
+    rest = ''.join([choice(alphanumeric) for _ in range(10)])
+    return start + rest
+
+
+if __name__ == '__main__':
+    print(dhis2_id())
