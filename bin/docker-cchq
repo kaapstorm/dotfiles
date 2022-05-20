@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ -z "$VIRTUAL_ENV" ]]
+then
+    echo 'Please activate a virtualenv'
+    exit 1
+fi
+
+scripts/docker up postgres couch redis zookeeper kafka minio elasticsearch2
+
