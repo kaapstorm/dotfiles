@@ -101,6 +101,7 @@ alias glmsur='git pull-master-recursive'
 # "git branch diff" to show GitHub-style diff
 # -- http://stackoverflow.com/a/15955008
 alias venv='if [[ -d .venv ]] ; then source .venv/bin/activate ; elif [[ -d venv ]] ; then source venv/bin/activate ; fi'
+alias nenv='if [[ -d nenv ]] ; then source nenv/bin/activate ; fi'
 
 # For Dimagi GPG keyring
 alias dimagi-gpg='gpg --keyring dimagi.gpg --no-default-keyring'
