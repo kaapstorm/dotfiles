@@ -1,12 +1,12 @@
 [user]
-	email = USERNAME@EXAMPLE.COM
-	name = YOUR NAME
+    email = USERNAME@EXAMPLE.COM
+    name = YOUR NAME
     signingkey = ABCD1234
 [push]
-	default = simple
+    default = simple
 [core]
-	excludesfile = /home/USERNAME/.gitignore_global
+    excludesfile = /home/USERNAME/.gitignore_global
 [commit]
-	gpgSign = true
+    gpgSign = true
 [init]
-	defaultBranch = main
+    defaultBranch = main
