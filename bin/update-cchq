@@ -2,7 +2,13 @@
 
 if [[ -z "$VIRTUAL_ENV" ]]
 then
-    echo 'Please activate a virtualenv'
+    echo 'Please activate a Python virtualenv'
+    exit 1
+fi
+
+if [[ -z "$NODE_VIRTUAL_ENV" ]]
+then
+    echo 'Please activate a Node virtualenv'
     exit 1
 fi
 
