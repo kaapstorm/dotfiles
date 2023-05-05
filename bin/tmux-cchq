@@ -26,5 +26,5 @@ tmux new-session -s cchq -n ptop \
     new-window -n formplayer \
         'java -jar formplayer.jar' \; \
     new-window -n runserver \
-        './manage.py runserver_plus 0.0.0.0:8000' \;
+        './manage.py runserver_plus --keep-meta-shutdown 0.0.0.0:8000' \;
 
