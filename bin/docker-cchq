@@ -6,5 +6,5 @@ then
     exit 1
 fi
 
-scripts/docker up postgres couch redis zookeeper kafka minio elasticsearch2
+scripts/docker up postgres couch redis zookeeper kafka minio elasticsearch5
 
