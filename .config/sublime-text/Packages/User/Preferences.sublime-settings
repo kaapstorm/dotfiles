@@ -1,9 +1,10 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-    // "font_face": "Fira Code",  // PyCharm
-    // "font_face": "Monospace",  // Terminal default
-    "font_face": "DejaVu Sans Mono",  // Terminal
+    // "font_face": "Monospace",
+    // "font_face": "DejaVu Sans Mono",
+    // "font_face": "Fira Code",
+    "font_face": "JetBrains Mono",
 
     "rulers": [ 72, 79, 80, 115],
 
