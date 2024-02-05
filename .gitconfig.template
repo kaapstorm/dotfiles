@@ -10,3 +10,6 @@
     gpgSign = true
 [init]
     defaultBranch = main
+[diff]
+    colorMoved = default
+    colorMovedWs = ignore-all-space
