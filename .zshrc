@@ -102,6 +102,7 @@ alias glmsur='git pull-master-recursive'
 # -- http://stackoverflow.com/a/15955008
 alias venv='if [[ -d .venv ]] ; then source .venv/bin/activate ; elif [[ -d venv ]] ; then source venv/bin/activate ; fi'
 alias nenv='if [[ -d nenv ]] ; then source nenv/bin/activate ; fi'
+alias dotenv='export $(grep -v "^#" .env | xargs -d "\n")'
 
 # For Dimagi GPG keyring
 alias dimagi-gpg='gpg --keyring dimagi.gpg --no-default-keyring'
