@@ -118,12 +118,6 @@ export PYTHONWARNINGS=ignore
 export COMMCARE_CLOUD_USE_AWS_SSM=1
 export COMMCARE_CLOUD_REPO=$HOME/src/dimagi/commcare-cloud
 
-if [[ $DISPLAY ]]
-then
-    # Disable CapsLock (for keyboards that don't have nice dip switches)
-    setxkbmap -option ctrl:nocaps
-fi
-
 # Use a sane date format
 export LC_TIME=en_GB.UTF-8
 
