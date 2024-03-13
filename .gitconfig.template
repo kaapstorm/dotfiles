@@ -13,3 +13,5 @@
 [diff]
     colorMoved = default
     colorMovedWs = ignore-all-space
+[alias]
+    trim = "!git remote prune origin && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
