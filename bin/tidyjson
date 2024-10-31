@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+"""
+Have you tried ``jq``?
+
+How about ``python3 -m json.tool``?
+
+Okay, fine.
+"""
 import fileinput
 import json
 
