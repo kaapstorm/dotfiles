@@ -1,6 +1,6 @@
 # Add user's bin to $PATH
 # $HOME/bin is shared across dual-boot; $HOME/.local/bin is just this OS
-export PATH=$HOME/.local/bin:$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -120,6 +120,9 @@ export COMMCARE_CLOUD_REPO=$HOME/src/dimagi/commcare-cloud
 
 # Use a sane date format
 export LC_TIME=en_GB.UTF-8
+
+# Use atuin for shell history
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # Launch gpg-agent for Git
 export GPG_TTY=`tty`
