@@ -4,27 +4,26 @@
 #     # https://stackoverflow.com/a/25588441
 #     `$ rm celerybeat-schedule`
 
-if [[ -z "$VIRTUAL_ENV" ]]
-then
-    echo 'Please activate a Python virtualenv'
-    exit 1
-fi
+# Build and run Formplayer:
+#     $ cd ~/src/dimagi/formplayer
+#     $ ./gradlew build
+#     $ java -jar build/libs/formplayer.jar
 
-if [[ -z "$NODE_VIRTUAL_ENV" ]]
-then
-    echo 'Please activate a Node virtualenv'
-    exit 1
-fi
+# runserver_plus (Does not work with Django 4.2)
+#         ./manage.py runserver_plus --keep-meta-shutdown 0.0.0.0:8000' \;
 
 tmux new-session -s cchq -n ptop \
-        './manage.py ptop_es_manage --flip_all_aliases; \
+        'source .venv/bin/activate; \
+         ./manage.py ptop_reindexer_v2 user --reset; \
          ./manage.py run_ptop --all --processor-chunk-size=1' \; \
     new-window -n worker \
-        'celery -A corehq worker -l info' \; \
-    new-window -n beat \
-        'celery -A corehq beat -l info' \; \
+        'source .venv/bin/activate; \
+         celery -A corehq worker -B -l info' \; \
     new-window -n formplayer \
         'java -jar formplayer.jar' \; \
     new-window -n runserver \
-        './manage.py runserver_plus --keep-meta-shutdown 0.0.0.0:8000' \;
+        'source .venv/bin/activate; \
+         source nenv/bin/activate; \
+         export OAUTHLIB_INSECURE_TRANSPORT=1; \
+         ./manage.py runserver 0.0.0.0:8000' \;
 
