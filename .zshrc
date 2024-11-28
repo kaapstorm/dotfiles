@@ -128,3 +128,6 @@ eval "$(atuin init zsh --disable-up-arrow)"
 export GPG_TTY=`tty`
 gpgconf --launch gpg-agent
 
+# Configure Daniel Miller's load script
+export LOAD_HOME=$HOME/opt/load
+source $LOAD_HOME/.load.sh
