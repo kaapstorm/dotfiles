@@ -16,6 +16,10 @@ tmux new-session -s cchq -n ptop \
         'source .venv/bin/activate; \
          ./manage.py ptop_reindexer_v2 user --reset; \
          ./manage.py run_ptop --all --processor-chunk-size=1' \; \
+    new-window -n yarn-dev \
+        'source .venv/bin/activate; \
+         source nenv/bin/activate; \
+         yarn dev' \; \
     new-window -n worker \
         'source .venv/bin/activate; \
          celery -A corehq worker -B -l info' \; \

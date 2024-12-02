@@ -13,6 +13,7 @@ then
 fi
 
 git pull-master-recursive
+pip install --upgrade pip
 pip install -r requirements/dev-requirements.txt
 find . -name '*.pyc' -delete
 
@@ -31,6 +32,9 @@ find . -name '*.pyc' -delete
 #./manage.py migrate --database=p2
 
 yarn install --frozen-lockfile
+
+# Build Webpack bundles
+yarn build
 
 ./manage.py ptop_preindex
 
