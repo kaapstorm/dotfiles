@@ -129,5 +129,5 @@ export GPG_TTY=`tty`
 gpgconf --launch gpg-agent
 
 # Configure Daniel Miller's load script
-export LOAD_HOME=$HOME/opt/load
+export LOAD_HOME=$HOME/.local/share/load
 source $LOAD_HOME/.load.sh
