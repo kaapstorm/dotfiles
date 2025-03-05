@@ -1,10 +1,15 @@
-__pycache__/
-pip_cache/
+# IDE
+.cursor/
 .idea/
-.pytype/
+
+# Environment
 .env
+nenv/
 .venv/
 venv/
-nenv/
-*.py[co]
 
+# Python
+*.py[co]
+__pycache__/
+pip_cache/
+.pytype/
