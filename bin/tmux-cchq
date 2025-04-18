@@ -12,22 +12,29 @@
 # runserver_plus (Does not work with Django 4.2)
 #         ./manage.py runserver_plus --keep-meta-shutdown 0.0.0.0:8000' \;
 
-tmux new-session -s cchq -n ptop \
-        'source .venv/bin/activate; \
-         ./manage.py ptop_reindexer_v2 user --reset; \
-         ./manage.py run_ptop --all --processor-chunk-size=1' \; \
-    new-window -n yarn-dev \
-        'source .venv/bin/activate; \
-         source nenv/bin/activate; \
-         yarn dev' \; \
-    new-window -n worker \
-        'source .venv/bin/activate; \
-         celery -A corehq worker -B -l info' \; \
-    new-window -n formplayer \
-        'java -jar formplayer.jar' \; \
-    new-window -n runserver \
-        'source .venv/bin/activate; \
-         source nenv/bin/activate; \
-         export OAUTHLIB_INSECURE_TRANSPORT=1; \
-         ./manage.py runserver 0.0.0.0:8000' \;
+tmux new-session -s cchq  -n docker ' \
+        source .venv/bin/activate; \
+        docker-cchq' \; \
+    new-window -n ptop ' \
+        source .venv/bin/activate; \
+        sleep 5s; \
+        ./manage.py ptop_reindexer_v2 user --reset; \
+        ./manage.py run_ptop --all --processor-chunk-size=1' \; \
+    new-window -n yarn-dev ' \
+        source .venv/bin/activate; \
+        source nenv/bin/activate; \
+        yarn dev' \; \
+    new-window -n worker ' \
+        source .venv/bin/activate; \
+        sleep 5s; \
+        celery -A corehq worker -B -l info' \; \
+    new-window -n formplayer ' \
+        sleep 5s; \
+        java -jar formplayer.jar' \; \
+    new-window -n runserver ' \
+        source .venv/bin/activate; \
+        source nenv/bin/activate; \
+        export OAUTHLIB_INSECURE_TRANSPORT=1; \
+        sleep 5s; \
+        ./manage.py runserver 0.0.0.0:8000' \;
 
