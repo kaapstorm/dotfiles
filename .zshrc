@@ -111,7 +111,8 @@ alias dimagi-gpg='gpg --keyring dimagi.gpg --no-default-keyring'
 #export CCHQ_STRICT_WARNINGS=1
 export CCHQ_WHITELISTED_WARNINGS=ignore
 export PYTHONWARNINGS=ignore
-#export DOCKER_HQ_POSTGRES_VERSION=10
+# uv to compile Python source files to bytecode after installation
+UV_COMPILE_BYTECODE=true
 
 # For commcare-cloud
 # https://confluence.dimagi.com/pages/viewpage.action?pageId=106629646

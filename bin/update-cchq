@@ -13,17 +13,8 @@ then
 fi
 
 git pull-master-recursive
-pip install --upgrade pip
-pip install -r requirements/dev-requirements.txt
+uv sync --compile-bytecode
 find . -name '*.pyc' -delete
-
-# Compress offline, like production:
-#./manage.py collectstatic --noinput
-#./manage.py compilejsi18n
-#./manage.py fix_less_imports_collectstatic
-#./manage.py compress --force
-
-#./manage.py build_requirejs --local
 
 ./manage.py migrate
 # For USE_PARTITIONED_DATABASE = True
