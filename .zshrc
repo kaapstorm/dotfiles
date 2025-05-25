@@ -122,8 +122,11 @@ export COMMCARE_CLOUD_REPO=$HOME/src/dimagi/commcare-cloud
 # Use a sane date format
 export LC_TIME=en_GB.UTF-8
 
-# Use atuin for shell history
-eval "$(atuin init zsh --disable-up-arrow)"
+if command -v atuin
+then
+    # Use atuin for shell history
+    eval "$(atuin init zsh --disable-up-arrow)"
+fi
 
 # Launch gpg-agent for Git
 export GPG_TTY=`tty`
