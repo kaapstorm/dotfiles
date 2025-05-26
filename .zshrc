@@ -122,7 +122,7 @@ export COMMCARE_CLOUD_REPO=$HOME/src/dimagi/commcare-cloud
 # Use a sane date format
 export LC_TIME=en_GB.UTF-8
 
-if command -v atuin
+if command -v atuin > /dev/null 2>&1
 then
     # Use atuin for shell history
     eval "$(atuin init zsh --disable-up-arrow)"
