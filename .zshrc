@@ -100,7 +100,8 @@ alias ggrn='git grep -n'
 alias glmsur='git pull-master-recursive'
 # "git branch diff" to show GitHub-style diff
 # -- http://stackoverflow.com/a/15955008
-alias venv='if [[ -d .venv ]] ; then source .venv/bin/activate ; elif [[ -d venv ]] ; then source venv/bin/activate ; fi'
+
+alias venv='if [[ -d .venv ]] ; then source .venv/bin/activate ; elif [[ -d venv ]] ; then source venv/bin/activate ; else echo "venv not found" ; fi'
 alias nenv='if [[ -d nenv ]] ; then source nenv/bin/activate ; fi'
 alias dotenv='export $(grep -v "^#" .env | xargs -d "\n")'
 
