@@ -16,11 +16,9 @@ git pull-master-recursive
 uv sync --compile-bytecode
 find . -name '*.pyc' -delete
 
-./manage.py migrate
+# ./manage.py migrate
 # For USE_PARTITIONED_DATABASE = True
-#./manage.py migrate --database=proxy
-#./manage.py migrate --database=p1
-#./manage.py migrate --database=p2
+./manage.py migrate_multi
 
 yarn install --frozen-lockfile
 
