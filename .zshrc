@@ -1,6 +1,6 @@
 # Add user's bin to $PATH
 # $HOME/bin is shared across dual-boot; $HOME/.local/bin is just this OS
-export PATH=$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$HOME/.npm-global/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$HOME/.npm-global/bin:$HOME/.modular/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
