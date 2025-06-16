@@ -3,8 +3,11 @@
 " Settings
 " ========
 
+set encoding=utf-8
+
 " Show trailing whitespace
-set list listchars=tab:»·,trail:·
+set list
+set listchars=tab:»·,trail:·
 
 if has('mouse')
     set mouse=a
