@@ -1,16 +1,9 @@
 #!/bin/bash
 
-# If celery dies with DBPageNotFoundError:
-#     # https://stackoverflow.com/a/25588441
-#     `$ rm celerybeat-schedule`
-
 # Build and run Formplayer:
 #     $ cd ~/src/dimagi/formplayer
 #     $ ./gradlew build
 #     $ java -jar build/libs/formplayer.jar
-
-# runserver_plus (Does not work with Django 4.2)
-#         ./manage.py runserver_plus --keep-meta-shutdown 0.0.0.0:8000' \;
 
 tmux new-session -s cchq  -n docker ' \
         source .venv/bin/activate; \
@@ -18,7 +11,6 @@ tmux new-session -s cchq  -n docker ' \
     new-window -n ptop ' \
         source .venv/bin/activate; \
         sleep 5s; \
-        ./manage.py ptop_reindexer_v2 user --reset; \
         ./manage.py run_ptop --all --processor-chunk-size=1' \; \
     new-window -n yarn-dev ' \
         source .venv/bin/activate; \
