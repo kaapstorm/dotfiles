@@ -136,3 +136,6 @@ gpgconf --launch gpg-agent
 # Configure Daniel Miller's load script
 export LOAD_HOME=$HOME/.local/share/load
 source $LOAD_HOME/.load.sh
+
+# Android settings
+export ANDROID_HOME=$HOME/Android/Sdk
