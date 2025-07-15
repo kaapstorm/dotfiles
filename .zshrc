@@ -76,7 +76,11 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # You may need to manually set your language environment
-export LANG=en_GB.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US
+
+# Use a sane date format
+export LC_TIME=en_GB.UTF-8
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
@@ -122,9 +126,6 @@ UV_COMPILE_BYTECODE=true
 # https://confluence.dimagi.com/pages/viewpage.action?pageId=106629646
 export COMMCARE_CLOUD_USE_AWS_SSM=1
 export COMMCARE_CLOUD_REPO=$HOME/src/dimagi/commcare-cloud
-
-# Use a sane date format
-export LC_TIME=en_GB.UTF-8
 
 if command -v atuin > /dev/null 2>&1
 then
