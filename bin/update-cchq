@@ -13,7 +13,7 @@ then
 fi
 
 git pull-master-recursive
-uv sync --compile-bytecode
+uv sync && uv pip install -r requirements/local.txt
 find . -name '*.pyc' -delete
 
 # ./manage.py migrate
