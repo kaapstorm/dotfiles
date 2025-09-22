@@ -116,6 +116,9 @@ alias venv='if [[ -d .venv ]] ; then source .venv/bin/activate ; elif [[ -d venv
 alias nenv='if [[ -d nenv ]] ; then source nenv/bin/activate ; fi'
 alias dotenv='export $(grep -v "^#" .env | xargs -d "\n")'
 
+# uv cache dir on same filesystem as src to enable hardlinks
+export UV_CACHE_DIR=/srv/share/cache/uv/
+
 # For Dimagi GPG keyring
 alias dimagi-gpg='gpg --keyring dimagi.gpg --no-default-keyring'
 
