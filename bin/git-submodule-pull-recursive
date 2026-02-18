@@ -1,12 +1,9 @@
 #!/bin/sh
 
-git checkout master
-git pull origin master
 git submodule update --init
 git submodule foreach --recursive 'git checkout master; git pull origin master &'
 until [ -z "`ps aux | awk '{ print $11 " " $12 " " $13 " " $14; }' | grep 'git pull origin master'`" ]
-do 
+do
     sleep 1
 done
 git submodule update --recursive
-
