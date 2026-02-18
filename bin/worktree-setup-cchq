@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ -z "$1" ] || [ ! -d "$1" ]; then
+    echo "Missing or invalid worktree directory: $1"
+    exit 1
+fi
+
+cd $1
+cp /srv/share/src/dimagi/commcare-hq/localsettings.py ./
+cp /srv/share/src/dimagi/commcare-hq/requirements/local.txt ./requirements/
+
+git submodule-pull-recursive  # runs $HOME/bin/git-submodule-pull-recursive
+
+uv venv --python 3.13+gil
+source .venv/bin/activate
+
+uv sync && uv pip install -r requirements/local.txt  # includes nodeenv
+
+nodeenv nenv  # virtualenv for latest node (currently 25.6.1)
+source nenv/bin/activate
+npm install --global yarn
+yarn install --frozen-lockfile
+yarn build
