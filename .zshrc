@@ -109,7 +109,7 @@ alias gpr='echo You mean gpsup'
 alias gsur='git submodule update --recursive'
 alias ggr='git grep'
 alias ggrn='git grep -n'
-alias glmsur='git pull-master-recursive'
+alias gspr='git submodule-pull-recursive'
 # "git branch diff" to show GitHub-style diff
 # -- http://stackoverflow.com/a/15955008
 
