@@ -15,7 +15,7 @@ fi
 git checkout master
 git pull origin master
 git submodule-pull-recursive
-uv sync && uv pip install -r requirements/local.txt
+uv sync --compile-bytecode && uv pip install -r requirements/local.txt
 find . -name '*.pyc' -delete
 
 # ./manage.py migrate
