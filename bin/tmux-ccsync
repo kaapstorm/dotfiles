@@ -1,0 +1,14 @@
+#!/bin/bash
+
+tmux new-session -s ccsync  -n docker ' \
+        source .venv/bin/activate; \
+        docker-compose up db redis' \; \
+    new-window -n worker ' \
+        source .venv/bin/activate; \
+        sleep 2s; \
+        celery -A commcare_sync worker -l INFO -B' \; \
+    new-window -n runserver ' \
+        source .venv/bin/activate; \
+        sleep 2s; \
+        ./manage.py runserver 0.0.0.0:8001' \;
+
