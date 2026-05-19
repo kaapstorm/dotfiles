@@ -20,7 +20,13 @@ To use as a hook, update `~/.claude/settings.json` with the following:
         "command": "claude-transcript"
       }]
     }],
-  // ...
+    "SessionEnd": [{
+      "matcher": "",
+      "hooks": [{
+        "type": "command",
+        "command": "claude-transcript"
+      }]
+    }]
   },
   // ...
 }
