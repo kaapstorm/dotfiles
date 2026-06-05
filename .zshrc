@@ -79,13 +79,15 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# You may need to manually set your language environment
+# Set language environment
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US
-export LC_ALL=en_US.UTF-8
 
 # Use a sane date format
 export LC_TIME=en_GB.UTF-8
+
+# Use metric for everything (incl. km)
+export LC_MEASUREMENT=en_ZA.UTF-8
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
