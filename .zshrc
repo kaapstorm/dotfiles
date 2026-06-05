@@ -103,6 +103,7 @@ export ZYPP_MEDIANETWORK=1
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+alias ch='claude --model haiku'
 alias cs='claude --model sonnet'
 
 # "git branch diff" to show GitHub-style diff
