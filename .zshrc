@@ -105,17 +105,18 @@ export ZYPP_MEDIANETWORK=1
 # For a full list of active aliases, run `alias`.
 alias cs='claude --model sonnet'
 
-alias gbd='git diff `git merge-base master HEAD` HEAD'
-alias gmm='git merge master'
-alias gpr='echo You mean gpsup'
-alias gsur='git submodule update --recursive'
-alias ggr='git grep'
-alias ggrn='git grep -n'
-alias gspr='git submodule-pull-recursive'
 # "git branch diff" to show GitHub-style diff
 # -- http://stackoverflow.com/a/15955008
+alias gbd='git diff `git merge-base master HEAD` HEAD'
 
-alias venv='if [[ -d .venv ]] ; then source .venv/bin/activate ; elif [[ -d venv ]] ; then source venv/bin/activate ; else echo "venv not found" ; fi'
+alias ggr='git grep'
+alias ggrn='git grep -n'
+alias gmm='git merge master'
+alias gpr='echo You mean gpsup'
+alias gspr='git submodule-pull-recursive'
+alias gsur='git submodule update --recursive'
+
+alias venv='if [[ -d .venv ]] ; then source .venv/bin/activate ; elif [[ -d venv ]] ; then source venv/bin/activate ; else echo "virtualenv not found" ; fi'
 alias nenv='if [[ -d nenv ]] ; then source nenv/bin/activate ; fi'
 alias dotenv='export $(grep -v "^#" .env | xargs -d "\n")'
 
