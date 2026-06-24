@@ -11,6 +11,7 @@ tmux new-session -s cchq  -n docker ' \
     new-window -n ptop ' \
         source .venv/bin/activate; \
         sleep 5s; \
+        kafka-up.sh; \
         ./manage.py run_ptop --all --processor-chunk-size=1' \; \
     new-window -n yarn-dev ' \
         source .venv/bin/activate; \
