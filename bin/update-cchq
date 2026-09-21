@@ -18,6 +18,7 @@ git submodule-pull-recursive
 uv sync --compile-bytecode && uv pip install -r requirements/local.txt
 find . -name '*.pyc' -delete
 
+./manage.py sync_couch_views
 # ./manage.py migrate
 # For USE_PARTITIONED_DATABASE = True
 ./manage.py migrate_multi
