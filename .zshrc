@@ -131,8 +131,8 @@ alias dimagi-gpg='gpg --keyring dimagi.gpg --no-default-keyring'
 
 # For commcare-hq
 #export CCHQ_STRICT_WARNINGS=1
-export CCHQ_WHITELISTED_WARNINGS=ignore
-export PYTHONWARNINGS=ignore
+#export CCHQ_WHITELISTED_WARNINGS=ignore
+#export PYTHONWARNINGS=ignore
 # uv to compile Python source files to bytecode after installation
 UV_COMPILE_BYTECODE=true
 
