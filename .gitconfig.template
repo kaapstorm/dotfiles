@@ -14,4 +14,5 @@
     colorMoved = default
     colorMovedWs = ignore-all-space
 [alias]
+    autofixup = "!sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && GIT_SEQUENCE_EDITOR=true git rebase -i --autostash --autosquash $REV^' -"
     trim = "!git remote prune origin && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
