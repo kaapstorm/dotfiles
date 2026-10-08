@@ -12,6 +12,6 @@ scripts/docker up \
     redis \
     zookeeper \
     kafka \
-    minio \
+    garage \
     elasticsearch6
 
