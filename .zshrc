@@ -107,6 +107,8 @@ export ZYPP_MEDIANETWORK=1
 # For a full list of active aliases, run `alias`.
 alias ch='claude --model haiku'
 alias cs='claude --model sonnet'
+alias co='claude --model opus'
+alias cf='claude --model fable'
 
 # "git branch diff" to show GitHub-style diff
 # -- http://stackoverflow.com/a/15955008
