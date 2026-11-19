@@ -122,7 +122,6 @@ alias gspr='git submodule-pull-recursive'
 alias gsur='git submodule update --recursive'
 
 alias venv='if [[ -d .venv ]] ; then source .venv/bin/activate ; elif [[ -d venv ]] ; then source venv/bin/activate ; else echo "virtualenv not found" ; fi'
-alias nenv='if [[ -d nenv ]] ; then source nenv/bin/activate ; fi'
 alias dotenv='export $(grep -v "^#" .env | xargs -d "\n")'
 
 # uv cache dir on same filesystem as src to enable hardlinks
@@ -157,5 +156,8 @@ gpgconf --launch gpg-agent
 export LOAD_HOME=$HOME/.local/share/load
 source $LOAD_HOME/.load.sh
 
-# Android settings
 export ANDROID_HOME=$HOME/Android/Sdk
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"

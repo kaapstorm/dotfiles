@@ -8,6 +8,7 @@
 nenv/
 .venv/
 venv/
+.nvmrc
 
 # Python
 *.py[co]

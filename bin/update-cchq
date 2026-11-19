@@ -6,11 +6,8 @@ then
     exit 1
 fi
 
-if [[ -z "$NODE_VIRTUAL_ENV" ]]
-then
-    echo 'Please activate a Node virtualenv'
-    exit 1
-fi
+source ~/.nvm/nvm.sh
+nvm use
 
 git checkout master
 git pull origin master
@@ -20,7 +17,7 @@ uv sync --compile-bytecode && uv pip install -r requirements/local.txt
 
 ./manage.py sync_couch_views
 # ./manage.py migrate
-# For USE_PARTITIONED_DATABASE = True
+# For `USE_PARTITIONED_DATABASE = True`:
 ./manage.py migrate_multi
 
 yarn install --frozen-lockfile
