@@ -6,9 +6,6 @@ then
     exit 1
 fi
 
-source ~/.nvm/nvm.sh
-nvm use
-
 git checkout master
 git pull origin master
 git submodule-pull-recursive
@@ -20,6 +17,9 @@ uv sync --compile-bytecode && uv pip install -r requirements/local.txt
 # For `USE_PARTITIONED_DATABASE = True`:
 ./manage.py migrate_multi
 
+source ~/.nvm/nvm.sh
+nvm install  # rather than `nvm use` in case `.nvmrc` has been updated
+npm install -g yarn
 yarn install --frozen-lockfile
 
 # Build Webpack bundles
